@@ -1,0 +1,43 @@
+#QUIZ GAME
+import random
+
+quiz_questions = {
+    "What is the capital of France?": {
+        "A": "Berlin",
+        "B": "Paris",
+        "C": "London",
+        "D": "Rome",
+        "Answer": "B"
+    },
+    "Which planet is largest in our solar system?": {
+        "A": "Earth",
+        "B": "Saturn",
+        "C": "Jupiter",
+        "D": "Uranus",
+        "Answer": "C"
+    },
+    "Who painted the Mona Lisa?": {
+        "A": "Leonardo da Vinci",
+        "B": "Michelangelo",
+        "C": "Raphael",
+        "D": "Caravaggio",
+        "Answer": "A"
+    },
+}
+score = 0
+
+for question, options in quiz_questions.items():
+    print(f"\nQuestion: {question}")
+    for option, value in options.items():
+        if option != "Answer":
+            print(f"{option}: {value}")
+    
+    user_answer = input("Enter your answer (A, B, C, D): ")
+    
+    if user_answer.upper() == options["Answer"]:
+        print("Correct!")
+        score += 1
+    else:
+        print(f"Incorrect. The correct answer is {options['Answer']}.")
+
+print(f"\nQuiz completed! Your final score is {score}/{len(quiz_questions)}")
