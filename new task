@@ -1,0 +1,20 @@
+#PROBLEM1:GREETING MESSAGE GENERATOR
+firstname=input("enter your first name")
+lastname=input("enter your last name")
+print(f"Heyy!!!,{firstname}{lastname}....")
+
+
+#PROBLEM2:RUNNER-UP SCORE FINDER
+n = int(input())
+scores = list(map(int, input().split()))
+print(sorted(set(scores), reverse=True)[1])
+'''Explanation:
+1. n = int(input()): Reads the number of participants from the user and converts it to an integer. (Not used in this code)
+2. scores = list(map(int, input().split())):
+    - input().split(): Reads scores from the user and splits them into a list of strings.
+    - map(int, ...): Converts each string score to an integer.
+    - list(...): Converts the map object to a list.
+3. sorted(set(scores), reverse=True):
+    - set(scores): Removes duplicate scores.
+    - sorted(...): Sorts scores in ascending order.
+    - reverse=True: Reverses the sort order (descending). '''
